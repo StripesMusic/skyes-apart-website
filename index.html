@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction</title>
+    <style>
+        /* 1. Reset defaults to ensure full screen coverage */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* 2. Main Container setup with Flexbox for centering */
+        .construction-container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000; /* Black base layer for the fade effect */
+            overflow: hidden;
+        }
+
+        /* 3. The Pseudo-element: handles the image, blur, and fade */
+        .construction-container::before {
+            content: "";
+            position: absolute;
+            /* Negative offsets prevent white "halo" borders caused by blurring */
+            top: -5%; left: -5%; right: -5%; bottom: -5%; 
+            background-image: url('YOUR_IMAGE_URL_HERE.jpg');
+            background-size: cover;
+            background-position: center;
+            
+            /* The Core Techniques */
+            filter: blur(8px); /* Blurs the image */
+            opacity: 0.4; /* Fades the image so the black background darkens it */
+            z-index: 1; /* Places this layer behind the text */
+        }
+
+        /* 4. The Text Content */
+        .content {
+            position: relative;
+            z-index: 2; /* Forces the text above the blurred background */
+            color: white;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 5rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin: 0;
+            /* Adds depth and separates text from the background */
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8); 
+        }
+
+        .content p {
+            font-size: 1.5rem;
+            color: #e0e0e0;
+            margin-top: 10px;
+            text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="construction-container">
+        <div class="content">
+            <h1>Under Construction</h1>
+            <p>Skyes Apart</p>
+        </div>
+    </div>
+
+</body>
+</html>
