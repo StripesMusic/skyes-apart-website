@@ -1,0 +1,8 @@
+// Cloudflare config. The website files live in the "public" folder.
+{
+  "name": "skyes-apart-website",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public"
+  }
+}
