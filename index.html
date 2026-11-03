@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Under Construction</title>
+
+    <!-- Google Fonts: Newsreader -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+
     <style>
         /* 1. Reset defaults to ensure full screen coverage */
         body, html {
@@ -30,9 +36,9 @@
             position: absolute;
             /* Negative offsets prevent white "halo" borders caused by blurring */
             top: -5%; left: -5%; right: -5%; bottom: -5%; 
-            background-image: url('YOUR_IMAGE_URL_HERE.jpg');
+            background-image: url('https://skyesapart.com/DSCN1684.jpg');
             background-size: cover;
-            background-position: center;
+            background-position: 0 -10vh;            
             
             /* The Core Techniques */
             filter: blur(8px); /* Blurs the image */
@@ -46,11 +52,17 @@
             z-index: 2; /* Forces the text above the blurred background */
             color: white;
             text-align: center;
+            
+            /* Newsreader font applied to the text wrapper */
+            font-family: "Newsreader", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
         }
 
         .content h1 {
-            font-size: 5rem;
-            letter-spacing: 4px;
+            font-size: 2.5rem; /* Reduced from 5rem */
+            font-weight: 400;
+            letter-spacing: 3px;
             text-transform: uppercase;
             margin: 0;
             /* Adds depth and separates text from the background */
@@ -58,10 +70,12 @@
         }
 
         .content p {
-            font-size: 1.5rem;
-            color: #e0e0e0;
-            margin-top: 10px;
-            text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8);
+            font-size: 1.15rem; /* Reduced from 1.5rem */
+            font-weight: 300;
+            letter-spacing: 1.5px;
+            color: #dcdcdc;
+            margin-top: 12px;
+            text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8); 
         }
     </style>
 </head>
