@@ -1,6 +1,6 @@
 # Skyes Apart website
 
-A plain HTML site (no build step). Everything that goes live is in the `public/` folder, and `public/index.html` is the home page.
+A plain HTML site (no build step), live at https://skyes-apart-website.pages.dev. Everything that goes live is in the `public/` folder, and `public/index.html` is the home page.
 
 ## Cloudflare settings
 
