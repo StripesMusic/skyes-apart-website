@@ -53,29 +53,70 @@
             color: white;
             text-align: center;
             
-            /* Newsreader font applied to the text wrapper */
             font-family: "Newsreader", serif;
             font-optical-sizing: auto;
             font-style: normal;
         }
 
         .content h1 {
-            font-size: 2.5rem; /* Reduced from 5rem */
+            font-size: 2.5rem;
             font-weight: 400;
             letter-spacing: 3px;
             text-transform: uppercase;
             margin: 0;
-            /* Adds depth and separates text from the background */
             text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8); 
         }
 
         .content p {
-            font-size: 1.15rem; /* Reduced from 1.5rem */
+            font-size: 1.15rem;
             font-weight: 300;
             letter-spacing: 1.5px;
             color: #dcdcdc;
             margin-top: 12px;
             text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8); 
+        }
+
+        /* 5. Social Links Bar (Anchored at the bottom) */
+        .social-links {
+            position: absolute;
+            bottom: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Plain white outline icons, no background */
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px;
+            color: #ffffff;
+            text-decoration: none;
+            opacity: 0.85;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        .social-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+        }
+
+        /* Hover animation */
+        .social-btn:hover,
+        .social-btn:focus-visible {
+            opacity: 1;
+            transform: translateY(-3px);
         }
     </style>
 </head>
@@ -86,6 +127,51 @@
             <h1>Under Construction</h1>
             <p>Skyes Apart</p>
         </div>
+
+        <!-- Social Media Buttons -->
+        <nav class="social-links" aria-label="Social media links">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/skyes.apart/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"/>
+                    <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/>
+                    <path d="M16.5 7.5v.01"/>
+                </svg>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@skyesapart" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4z"/>
+                    <path d="M10 9l5 3l-5 3z"/>
+                </svg>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@skyes.apart" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z"/>
+                </svg>
+            </a>
+
+            <!-- Spotify -->
+            <a href="https://open.spotify.com/artist/4y1RwVpcRTW4EyFeKCKegX" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Spotify">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/>
+                    <path d="M8 11.973c2.5 -1.473 5.5 -.973 7.5 .527"/>
+                    <path d="M9 15c1.5 -1 4 -1 5 .5"/>
+                    <path d="M7 9c2 -1 6 -2 10 .5"/>
+                </svg>
+            </a>
+
+            <!-- Apple Music -->
+            <a href="https://music.apple.com/us/artist/skyes-apart/6782264436" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Apple Music">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8.286 7.008c-3.216 0 -4.286 3.23 -4.286 5.92c0 3.229 2.143 8.072 4.286 8.072c1.165 -.05 1.799 -.538 3.214 -.538c1.406 0 1.607 .538 3.214 .538s4.286 -3.229 4.286 -5.381c-.03 -.011 -2.649 -.434 -2.679 -3.23c-.02 -2.335 2.589 -3.179 2.679 -3.228c-1.096 -1.606 -3.162 -2.113 -3.75 -2.153c-1.535 -.12 -3.032 1.077 -3.75 1.077c-.729 0 -2.036 -1.077 -3.214 -1.077z"/>
+                    <path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2"/>
+                </svg>
+            </a>
+        </nav>
     </div>
 
 </body>
